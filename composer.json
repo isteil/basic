@@ -1,0 +1,144 @@
+{
+	"name": "isteil/basic",
+	"description": "Basic isteil Project",
+	"keywords": ["yii2", "crm", "basic", "project"],
+	"homepage": "https://isteil.com/",
+	"type": "project",
+	"license": "BSD-3-Clause",
+	"support": {
+		"source": "https://github.com/isteil/basic"
+	},
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">=7.0.0",
+		"yiisoft/yii2": "~2.0.14",
+		"yiisoft/yii2-swiftmailer": "~2.0.0",
+		"yiisoft/yii2-bootstrap4": "dev-master",
+		"yiisoft/yii2-gii": "~2.0.0",
+		"isteil/yii2-system": "dev-master",
+		"isteil/yii2-seo": "dev-master",
+		"isteil/yii2-settings": "dev-master",
+		"isteil/yii2-console": "dev-master",
+		"isteil/yii2-admin": "dev-master",
+		"isteil/yii2-user": "dev-master",
+		"isteil/yii2-rbac": "dev-master",
+		"isteil/yii2-feedback": "dev-master",
+		"isteil/yii2-page": "dev-master",
+		"isteil/yii2-file": "dev-master",
+		"isteil/yii2-product": "dev-master",
+		"isteil/yii2-notification": "dev-master",
+		"isteil/yii2-gii": "dev-master",
+		"yiisoft/yii2-jui": "~2.0.0",
+		"skeeks/yii2-assets-auto-compress": "~1.3.0",
+		"kartik-v/yii2-grid": "dev-master",
+		"kartik-v/yii2-dynagrid": "dev-master",
+		"kartik-v/yii2-widgets": "dev-master",
+		"kartik-v/yii2-editable": "dev-master",
+		"kartik-v/yii2-date-range": "dev-master",
+		"kartik-v/yii2-icons": "dev-master",
+		"kartik-v/yii2-bootstrap4-dropdown": "dev-master",
+		"kartik-v/yii2-widget-fileinput": "dev-master",
+		"kartik-v/yii2-tree-manager": "dev-master",
+		"2amigos/yii2-tinymce-widget": "~1.1",
+		"docusign/esign-client": "~3.0.1",
+		"froala/yii2-froala-editor": "^2.6.0",
+		"wbraganca/yii2-dynamicform": "2.0.2"
+	},
+	"require-dev": {
+		"yiisoft/yii2-debug": "~2.0.0",
+		"yiisoft/yii2-faker": "~2.0.0",
+
+		"codeception/base": "^2.2.3",
+		"codeception/verify": "~0.3.1",
+		"codeception/specify": "~0.4.3"
+	},
+	"config": {
+		"process-timeout": 1800,
+		"fxp-asset": {
+			"enabled": false
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"yii\\composer\\Installer::postInstall"
+		],
+		"post-create-project-cmd": [
+			"yii\\composer\\Installer::postCreateProject",
+			"yii\\composer\\Installer::postInstall"
+		]
+	},
+	"extra": {
+		"yii\\composer\\Installer::postCreateProject": {
+			"setPermission": [
+				{
+					"runtime": "0777",
+					"web/assets": "0777",
+					"yii": "0755"
+				}
+			]
+		},
+		"yii\\composer\\Installer::postInstall": {
+			"generateCookieValidationKey": [
+				"config/web.php"
+			]
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/system.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/feedback.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/settings.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/file.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/product.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/user.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/page.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/console.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/rbac.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/admin.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/notification.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/gii.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:isteil-team/seo.git"
+		}
+	]
+}
