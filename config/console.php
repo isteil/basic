@@ -9,17 +9,18 @@
 define('DS', DIRECTORY_SEPARATOR);
 
 $config = [
-	'id'					 => 'isteil-console',
-	'basePath'				 => dirname(__DIR__),
-	'bootstrap'				 => ['log', isteil\console\components\ConsoleBootstrap::class],
-	'modules'				 => require(__DIR__ . '/modules.php'),
-	'components'			 => [
+	'id'			 => 'isteil-console',
+	'basePath'		 => dirname(__DIR__),
+	'bootstrap'		 => ['log', isteil\console\components\ConsoleBootstrap::class],
+	'modules'		 => require(__DIR__ . '/modules.php'),
+	'aliases'		 => require __DIR__ . '/aliases.php',
+	'components'	 => [
 		'db'		 => file_exists(__DIR__ . '/db.php') ? require(__DIR__ . '/db.php') : '',
 		'session'	 => [
 			'class' => 'yii\web\Session'
 		],
 	],
-	'controllerMap'			 => [
+	'controllerMap'	 => [
 		'migrate' => [
 			'class'			 => 'yii\console\controllers\MigrateController',
 			'migrationPath'	 => [

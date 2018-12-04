@@ -2,7 +2,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use yii\helpers\Html;
+use isteil\seo\components\SeoData;
 ?>
 
 <?php $this->beginPage() ?>
@@ -10,10 +10,8 @@ use yii\helpers\Html;
 <html lang="<?= Yii::$app->language ?>">
 	<head>
 		<meta charset="<?= Yii::$app->charset ?>">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<?= Html::csrfMetaTags() ?>
-		<title><?= Html::encode($this->title) ?></title>
+		<?= SeoData::getInstance()->renderMetaTags() ?>
 		<?php $this->head() ?>
 	</head>
 	<body>
