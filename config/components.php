@@ -20,7 +20,7 @@ return [
 		'enableAutoLogin'	 => true,
 	],
 	'settings'		 => [
-		'class' => \isteil\settings\components\Settings::class,
+		'class' => \isteil\settings\components\SettingsManager::class,
 	],
 	'userSaver'		 => [
 		'class' => \isteil\user\components\UserSaver::class,
@@ -41,6 +41,9 @@ return [
 		'showScriptName'	 => false,
 		'rules'				 => [
 		],
+	],
+	'pageUrl'		 => [
+		'class' => \isteil\page\components\PageUrl::class,
 	],
 	'assetManager'	 => [
 		'dirMode'			 => 0777,

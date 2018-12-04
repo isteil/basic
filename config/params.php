@@ -16,7 +16,7 @@ return [
 		'in' => [
 			'title'		 => 'Welcome',
 			'text'		 => 'Hey Soldier welcome back signin now there is lot of new stuff waiting for you',
-			'bg-color'	 => 'indigo lighten-2',
+			'bg-color'	 => 'light',
 		],
 		'up' => [
 			'title'		 => 'Create New Account',

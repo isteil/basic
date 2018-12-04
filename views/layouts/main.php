@@ -5,7 +5,6 @@
 use yii\helpers\Html;
 ?>
 
-<?php \app\assets\SublimeAsset::register($this) ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">

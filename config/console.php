@@ -9,11 +9,9 @@
 define('DS', DIRECTORY_SEPARATOR);
 
 $config = [
-	'id'					 => 'ax-console',
+	'id'					 => 'isteil-console',
 	'basePath'				 => dirname(__DIR__),
 	'bootstrap'				 => ['log', isteil\console\components\ConsoleBootstrap::class],
-	'controllerNamespace'	 => 'ax\console\commands',
-	'aliases'				 => require __DIR__ . '/aliases.php',
 	'modules'				 => require(__DIR__ . '/modules.php'),
 	'components'			 => [
 		'db'		 => file_exists(__DIR__ . '/db.php') ? require(__DIR__ . '/db.php') : '',
