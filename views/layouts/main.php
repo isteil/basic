@@ -5,6 +5,8 @@
 use isteil\seo\components\SeoData;
 ?>
 
+<?php \app\assets\AppAsset::register($this) ?>
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
